@@ -1,12 +1,13 @@
 //
 //  SceneDelegate.swift
-//  GoPay-Tokenization-Swift
+//  SwiftStarter
 //
-//  Created by Muhammad Fauzi Masykur on 26/07/20.
+//  Created by Muhammad Fauzi Masykur on 08/07/20.
 //  Copyright © 2020 Muhammad Fauzi Masykur. All rights reserved.
 //
 
 import UIKit
+import GopayCheckoutKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -20,6 +21,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let _ = (scene as? UIWindowScene) else { return }
     }
 
+    func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>) {
+        if let url = URLContexts.first?.url {
+            GPYClient.handleCallbackUrl(url)
+        }
+    }
+    
     func sceneDidDisconnect(_ scene: UIScene) {
         // Called as the scene is being released by the system.
         // This occurs shortly after the scene enters the background, or when its session is discarded.
