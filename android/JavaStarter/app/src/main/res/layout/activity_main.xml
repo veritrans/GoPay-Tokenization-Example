@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_margin="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Merchant Server URL" />
+
+        <EditText
+            android:id="@+id/merchant_server_url_field"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="https://checkout-sample-node-server.herokuapp.com/api"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Phone Number"/>
+
+        <EditText
+            android:id="@+id/phone_number_field"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="82221009967"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Callback URL"/>
+
+        <EditText
+            android:id="@+id/callback_url_field"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="example://app"/>
+
+        <Button
+            android:id="@+id/account_linking_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Link Account"/>
+
+        <LinearLayout
+            android:id="@+id/account_details"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:visibility="gone"
+            tools:visibility="visible"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Account ID"/>
+
+            <TextView
+                android:id="@+id/account_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="xxxxx"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Account Status"/>
+
+            <TextView
+                android:id="@+id/account_status"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="xxxxx"/>
+
+            <LinearLayout
+                android:id="@+id/wallet_details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Wallet Details"/>
+
+                <TextView
+                    android:id="@+id/payment_options"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:text="xxxxx"/>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/account_details_buttons"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                tools:visibility="visible"
+                android:orientation="vertical">
+                <Button
+                    android:id="@+id/enquire_account_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="Enquire Account"/>
+
+                <Button
+                    android:id="@+id/disable_account"
+                    android:layout_marginTop="16dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Disable Account"/>
+
+
+                <LinearLayout
+                    android:id="@+id/create_transaction_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:text="Amount"/>
+
+                    <EditText
+                        android:id="@+id/amount_field"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:text="12000"/>
+
+                    <Button
+                        android:id="@+id/create_transaction"
+                        android:layout_marginTop="16dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Create Transaction"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
