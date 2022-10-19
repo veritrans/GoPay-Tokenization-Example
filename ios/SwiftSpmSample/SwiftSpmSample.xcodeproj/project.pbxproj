@@ -57,7 +57,7 @@
 		0249626624B4E38B007652A9 = {
 			isa = PBXGroup;
 			children = (
-				0249627124B4E38B007652A9 /* SwiftStarter */,
+				0249627124B4E38B007652A9 /* SwiftSpmSample */,
 				0249627024B4E38B007652A9 /* Products */,
 				DDCB46B028E6C9AA001A803E /* Frameworks */,
 			);
@@ -71,7 +71,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		0249627124B4E38B007652A9 /* SwiftStarter */ = {
+		0249627124B4E38B007652A9 /* SwiftSpmSample */ = {
 			isa = PBXGroup;
 			children = (
 				0249627224B4E38B007652A9 /* AppDelegate.swift */,
@@ -83,7 +83,7 @@
 				0249627D24B4E38C007652A9 /* LaunchScreen.storyboard */,
 				0249628024B4E38C007652A9 /* Info.plist */,
 			);
-			path = SwiftStarter;
+			path = SwiftSpmSample;
 			sourceTree = "<group>";
 		};
 		DDCB46B028E6C9AA001A803E /* Frameworks */ = {
