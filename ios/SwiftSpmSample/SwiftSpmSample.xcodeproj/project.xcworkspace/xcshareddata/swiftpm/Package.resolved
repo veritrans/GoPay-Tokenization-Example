@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "gopay-checkout-sdk",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/veritrans/GoPay-Checkout-SDK",
+      "state" : {
+        "branch" : "spm",
+        "revision" : "75e3b4c7f65564dc28491f9dfb7a1029358ae1e1"
+      }
+    }
+  ],
+  "version" : 2
+}

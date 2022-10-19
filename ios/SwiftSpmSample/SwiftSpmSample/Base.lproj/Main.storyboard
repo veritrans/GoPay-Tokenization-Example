@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cUP-vi-4MS">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Config View Controller-->
+        <scene sceneID="3H2-5I-upi">
+            <objects>
+                <viewController id="Um2-3F-u1W" customClass="ConfigViewController" customModule="SwiftStarter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="H53-ak-nvv">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="lfJ-AD-gVV">
+                                <rect key="frame" x="16" y="412" width="382" height="72"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone Number" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UR5-Fh-DTn">
+                                        <rect key="frame" x="0.0" y="0.0" width="382" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pwm-Tt-yto">
+                                        <rect key="frame" x="0.0" y="42" width="382" height="30"/>
+                                        <state key="normal" title="Start Gopay Checkout"/>
+                                        <connections>
+                                            <action selector="startGopayCheckout:" destination="Um2-3F-u1W" eventType="touchUpInside" id="Wqh-uK-JXF"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="lfJ-AD-gVV" firstAttribute="centerY" secondItem="H53-ak-nvv" secondAttribute="centerY" id="6Wl-tS-BMt"/>
+                            <constraint firstItem="lfJ-AD-gVV" firstAttribute="leading" secondItem="jym-mT-Jdj" secondAttribute="leading" constant="16" id="Ree-rU-tVF"/>
+                            <constraint firstItem="lfJ-AD-gVV" firstAttribute="centerX" secondItem="H53-ak-nvv" secondAttribute="centerX" id="o5z-mr-ea9"/>
+                            <constraint firstItem="jym-mT-Jdj" firstAttribute="trailing" secondItem="lfJ-AD-gVV" secondAttribute="trailing" constant="16" id="rVs-cW-9Am"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="jym-mT-Jdj"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="DfM-0w-hjP"/>
+                    <connections>
+                        <outlet property="phoneNumberTF" destination="UR5-Fh-DTn" id="GXz-Hq-ipo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TXU-Ng-rJm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="289.85507246376812" y="89.732142857142847"/>
+        </scene>
+        <!--Payment View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="paymentVC" id="BYZ-38-t0r" customClass="PaymentViewController" customModule="SwiftStarter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="IJp-ik-Hg3">
+                                <rect key="frame" x="16" y="276.5" width="382" height="343.5"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lVS-ya-jb6">
+                                        <rect key="frame" x="0.0" y="0.0" width="382" height="30"/>
+                                        <state key="normal" title="Link Account"/>
+                                        <connections>
+                                            <action selector="linAccount:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UYe-yQ-NKO"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Account id :" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="scW-GP-Ykb">
+                                        <rect key="frame" x="145.5" y="38" width="91" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Account status :" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fbW-Er-icf">
+                                        <rect key="frame" x="129" y="66.5" width="124" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DId-fQ-11v">
+                                        <rect key="frame" x="0.0" y="95" width="382" height="30"/>
+                                        <state key="normal" title="Enquire Account"/>
+                                        <connections>
+                                            <action selector="enquireAccount:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zef-u9-nZs"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wallet Details" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Am5-KK-D8A">
+                                        <rect key="frame" x="139" y="133" width="104" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name :" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5OE-cb-l2W">
+                                        <rect key="frame" x="164" y="161.5" width="54.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Status :" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Hh-zg-tte">
+                                        <rect key="frame" x="162" y="190" width="58.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Token :" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xac-BO-Ncf">
+                                        <rect key="frame" x="163.5" y="218.5" width="55" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Balance :" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tkj-v9-lPK">
+                                        <rect key="frame" x="156" y="247" width="70" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rZw-Q1-1PZ">
+                                        <rect key="frame" x="0.0" y="275.5" width="382" height="30"/>
+                                        <state key="normal" title="Disable Account"/>
+                                        <connections>
+                                            <action selector="disableAccount:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cm6-gx-GJq"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P9i-ov-vSn">
+                                        <rect key="frame" x="0.0" y="313.5" width="382" height="30"/>
+                                        <state key="normal" title="Create Transaction"/>
+                                        <connections>
+                                            <action selector="createTransaction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7x6-LJ-Czi"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="P9i-ov-vSn" firstAttribute="leading" secondItem="rZw-Q1-1PZ" secondAttribute="leading" id="4sJ-FK-HhY"/>
+                                    <constraint firstItem="P9i-ov-vSn" firstAttribute="trailing" secondItem="rZw-Q1-1PZ" secondAttribute="trailing" id="COa-A2-rRR"/>
+                                    <constraint firstItem="DId-fQ-11v" firstAttribute="leading" secondItem="lVS-ya-jb6" secondAttribute="leading" id="EYL-R4-Wt2"/>
+                                    <constraint firstAttribute="trailing" secondItem="lVS-ya-jb6" secondAttribute="trailing" id="Tae-NZ-NF1"/>
+                                    <constraint firstItem="lVS-ya-jb6" firstAttribute="leading" secondItem="IJp-ik-Hg3" secondAttribute="leading" id="XkY-ak-GjF"/>
+                                    <constraint firstItem="rZw-Q1-1PZ" firstAttribute="leading" secondItem="DId-fQ-11v" secondAttribute="leading" id="awU-5W-WP0"/>
+                                    <constraint firstItem="rZw-Q1-1PZ" firstAttribute="trailing" secondItem="DId-fQ-11v" secondAttribute="trailing" id="nde-dB-Wio"/>
+                                    <constraint firstItem="DId-fQ-11v" firstAttribute="trailing" secondItem="lVS-ya-jb6" secondAttribute="trailing" id="wgl-DO-dXy"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="IJp-ik-Hg3" secondAttribute="trailing" constant="16" id="J5t-Mx-LYZ"/>
+                            <constraint firstItem="IJp-ik-Hg3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="QO7-GJ-xaN"/>
+                            <constraint firstItem="IJp-ik-Hg3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kqt-Mp-akG"/>
+                            <constraint firstItem="IJp-ik-Hg3" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="rh9-oZ-qVD"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="accountIdLabel" destination="scW-GP-Ykb" id="izV-Bs-crZ"/>
+                        <outlet property="accountStatusLabel" destination="fbW-Er-icf" id="fQw-nO-uKH"/>
+                        <outlet property="walletBalanceLabel" destination="Tkj-v9-lPK" id="akt-u0-yT0"/>
+                        <outlet property="walletNameLabel" destination="5OE-cb-l2W" id="kLY-5E-DQb"/>
+                        <outlet property="walletStatusLabel" destination="0Hh-zg-tte" id="VI2-rb-b28"/>
+                        <outlet property="walletTokenLabel" destination="Xac-BO-Ncf" id="Jkr-wB-1C7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="93.75"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="z9g-FP-36U">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cUP-vi-4MS" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Zi8-HR-9yg">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Um2-3F-u1W" kind="relationship" relationship="rootViewController" id="gUs-jM-kIP"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MS1-GL-fRj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-620.28985507246387" y="89.732142857142847"/>
+        </scene>
+    </scenes>
+</document>
